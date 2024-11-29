@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D8BFE9"
+    android:backgroundTint="#B7C3B2">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/meal_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/breakfast" />
+
+    <TextView
+        android:id="@+id/meal_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textAlignment="center"
+        android:textColor="#FF000000"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/meal_image"
+        tools:text="Breakfast" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:textAlignment="center"
+        android:textColor="#008302"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/meal_name"
+        tools:ignore="MissingConstraints"
+        tools:text="Select Food:" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="SELECT"
+        tools:layout_editor_absoluteX="161dp"
+        tools:layout_editor_absoluteY="521dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="174dp"
+        android:layout_height="37dp"
+        tools:text="Food Name: "
+        tools:textSize="25sp"
+        tools:textColor="@color/black"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="592dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="174dp"
+        android:layout_height="37dp"
+        tools:text="Calories: "
+        tools:textSize="25sp"
+        tools:textColor="@color/black"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="647dp"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="410dp"
+        android:layout_height="173dp"
+        tools:layout_editor_absoluteX="3dp"
+        tools:layout_editor_absoluteY="340dp"
+        tools:ignore="MissingConstraints"
+        tools:listitem="@layout/food_recycler_view"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

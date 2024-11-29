@@ -1,4 +1,4 @@
-package com.example.calpal.adapter
+package com.example.calpal.model
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -10,8 +10,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.calpal.R
 import com.example.calpal.model.Meal
 
-class ItemAdapter(private val context : Context, private val mealsList : List<Meal>)
-    : RecyclerView.Adapter<ItemAdapter.ItemViewHolder>(){
+class MealAdapter(private val context : Context, private val mealsList : List<Meal>)
+    : RecyclerView.Adapter<MealAdapter.ItemViewHolder>(){
 
     private lateinit var mListener : onItemClickListener
 
@@ -41,7 +41,7 @@ class ItemAdapter(private val context : Context, private val mealsList : List<Me
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
-        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.meal, parent, false)
+        val itemView = LayoutInflater.from(parent.context).inflate(R.layout.fragment_meal, parent, false)
         return ItemViewHolder(itemView, mListener);
     }
 

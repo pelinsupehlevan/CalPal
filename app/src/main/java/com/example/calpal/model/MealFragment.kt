@@ -4,13 +4,12 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
 
-class MealActivity : AppCompatActivity() {
+class MealFragment : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_meal)
+        setContentView(R.layout.fragment_meal)
 
         val mealImages : ImageView = findViewById(R.id.meal_image);
         val mealName : TextView = findViewById(R.id.meal_name);

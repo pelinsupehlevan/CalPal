@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.calpal.adapter.ItemAdapter
+import com.example.calpal.model.MealAdapter
 import com.example.calpal.model.Meal
 
 class MainActivity : AppCompatActivity() {
@@ -43,23 +43,23 @@ class MainActivity : AppCompatActivity() {
     private fun loadMeals() {
 
         for(i in meal_image.indices){
-
             val meal = Meal(meal_image[i], meal_name[i])
             mealsList.add(meal)
         }
 
-        var adapter = ItemAdapter(this, mealsList)
+        var adapter = MealAdapter(this, mealsList)
         recyclerView.adapter = adapter;
-        adapter.setOnItemClickListener(object : ItemAdapter.onItemClickListener{
+        adapter.setOnItemClickListener(object : MealAdapter.onItemClickListener{
             override fun onItemClick(position: Int) {
 
-                val intent = Intent(this@MainActivity, MealActivity::class.java)
+                val intent = Intent(this@MainActivity, MealFragment::class.java)
                 intent.putExtra("meal_name", mealsList[position].mealName)
                 intent.putExtra("meal_image", mealsList[position].mealImage)
 
                 startActivity(intent)
             }
-        })
+        }
+        )
     }
 }
 
