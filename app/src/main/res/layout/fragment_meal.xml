@@ -44,49 +44,51 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/meal_name"
-        tools:ignore="MissingConstraints"
         tools:text="Select Food:" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="SELECT"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="521dp"
-        tools:ignore="MissingConstraints" />
+        android:layout_marginStart="160dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/recyclerView2"
+        tools:text="SELECT" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="174dp"
         android:layout_height="37dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
         tools:text="Food Name: "
-        tools:textSize="25sp"
         tools:textColor="@color/black"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="592dp"
-        tools:ignore="MissingConstraints" />
+        tools:textSize="25sp" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="174dp"
         android:layout_height="37dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
         tools:text="Calories: "
-        tools:textSize="25sp"
         tools:textColor="@color/black"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="647dp"
-        tools:ignore="MissingConstraints" />
+        tools:textSize="25sp" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="410dp"
-        android:layout_height="173dp"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="340dp"
-        tools:ignore="MissingConstraints"
-        tools:listitem="@layout/food_recycler_view"
-        />
-
+        android:id="@+id/recyclerView2"
+        android:layout_width="374dp"
+        android:layout_height="155dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:listitem="@layout/food_recycler_view" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

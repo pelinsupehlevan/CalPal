@@ -14,16 +14,13 @@ class MealFragment : AppCompatActivity() {
         val mealImages : ImageView = findViewById(R.id.meal_image);
         val mealName : TextView = findViewById(R.id.meal_name);
 
-
         val bundle : Bundle ?= intent.extras
 
         val imageId1 = bundle!!.getInt("meal_image")
         val names = bundle.getString("meal_name")
 
-
         mealImages.setImageResource(imageId1)
         mealName.text = names;
-
     }
 }
 

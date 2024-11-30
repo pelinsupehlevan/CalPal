@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.calpal.model.HomeFragment
 import com.example.calpal.model.MealAdapter
 import com.example.calpal.model.Meal
 
@@ -15,7 +16,6 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var meal_image : List<Int>
     lateinit var meal_name : Array<String>
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -28,9 +28,7 @@ class MainActivity : AppCompatActivity() {
             R.drawable.snack
         )
 
-
         meal_name = resources.getStringArray(R.array.meal_name)
-
 
         recyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
@@ -58,8 +56,7 @@ class MainActivity : AppCompatActivity() {
 
                 startActivity(intent)
             }
-        }
-        )
+        })
     }
 }
 

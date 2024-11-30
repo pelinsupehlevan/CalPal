@@ -16,17 +16,12 @@ class MealAdapter(private val context : Context, private val mealsList : List<Me
     private lateinit var mListener : onItemClickListener
 
     interface onItemClickListener{
-
             fun onItemClick(position : Int)
-
     }
 
     fun setOnItemClickListener(listener: onItemClickListener){
-
         mListener = listener
-
     }
-
 
     class ItemViewHolder(private val view: View, listener: onItemClickListener) : RecyclerView.ViewHolder(view) {
         val imageView: ImageView = view.findViewById(R.id.meal_image)
@@ -36,7 +31,6 @@ class MealAdapter(private val context : Context, private val mealsList : List<Me
             itemView.setOnClickListener{
                 listener.onItemClick(adapterPosition)
             }
-
         }
     }
 

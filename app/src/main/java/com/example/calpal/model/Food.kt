@@ -3,15 +3,17 @@ package com.example.calpal.model
 import android.os.Parcel
 import android.os.Parcelable
 
-data class Food(val foodName : String, val calories : Int) : Parcelable {
+data class Food(val foodName : String, val calories : Int, val FoodId : String) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString() ?: "",
-        parcel.readInt()
+        parcel.readInt(),
+        parcel.readString() ?: ""
     )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(foodName)
         parcel.writeInt(calories)
+        parcel.writeString(FoodId)
 
     }
 
